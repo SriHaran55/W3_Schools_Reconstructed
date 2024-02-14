@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - W3 Resources</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    header {
+      background-color: black;
+      padding: 20px;
+    }
+    h1 {
+      color: pink;
+      margin: 0;
+      transition: color 0.5s;
+    }
+    h1:hover {
+      color: hotpink;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #555;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="text-align: center;">Contact - W3 Resources</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Contact Us</h2>
+    <p>Welcome to the contact page of W3 Resources. If you have any questions, feedback, or inquiries, please feel free to reach out to us using the contact form below. We value your input and will get back to you as soon as possible.</p>
+    <form id="contactForm">
+      <label style="color: #ff4da6;" for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label style="color: #ff4da6;" for="email">Your Email:</label>
+      <input type="text" id="email" name="email" required><br><br>
+      <label style="color: #ff4da6;" for="message">Message:</label><br><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2023 W3 Resources. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var nameInput = document.getElementById("name").value;
+      var emailInput = document.getElementById("email").value;
+      var messageInput = document.getElementById("message").value;
+
+      // Perform validation and submit form logic here
+
+      // Display success message
+      var successMessage = document.createElement("div");
+      successMessage.classList.add("success-message");
+      successMessage.textContent = "Your message has been sent successfully!";
+      document.getElementById("contactForm").appendChild(successMessage);
+
+      // Reset form fields
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    });
+  </script>
+</body>
+</html>
